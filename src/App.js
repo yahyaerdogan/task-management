@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Listing from './components/Listing';
+import Form from './components/Form';
+import ToDoList from './components/ToDoList'
+export default class App extends Component {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  state= {ToDoList};
+  
+  render() {
+
+    console.log(this.state.ToDoList);
+    console.log(ToDoList);
+
+    return (
+
+      <div className="container">
+        <Form />
+        <br />
+        <Listing name="yahay"/>
+      </div>
+
+    )
+  }
 }
-
-export default App;
